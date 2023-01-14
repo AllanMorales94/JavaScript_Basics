@@ -23,9 +23,31 @@ console.log(doubleAge(10));
 // } this is defining a function not called on it 
 
 
-const colors = ['orange', 'black', 'blue', 'teal', 'red', 'yellow', 'gray', 'pink'];
+const colors = ['orange', 'black', 'blue', 'teal', 'red', 'yellow', 'gray', 'pink', 'blue', 'pink', 'red'];
+// size of this array is 11 because it has 11 elements
+// the index of the last element is 7
+// the first index is 0
+// the last index 10
+console.log(colors[10])
+console.log(colors[colors.length - 1]) // colors[11] -> 
 
-const numbers = [1,2,3,4,5,6,7]
+// the last index is always one less than the size/length of an array
+
+// We have an array with 2500 patients 
+// what is the index of the last patient?
+// 2500 - 1 = 2499
+// the last patient's name is Bob
+// patients[patients.length - 1]
+
+
+
+
+
+colors.length;
+console.log(colors[colors.length - 1]) // colors[11 - 1] -> colors[10]
+
+const numbers = [1,2,3,4,5,6,7,5,6,7,4,3,5,6,7,8,9,5,4,3,3,5,67,7,7,8,89,9,0,6,4,3,34]
+console.log(numbers[numbers.length - 1])
 
 const arrBooleans = [true, false, true, false, true, true]
 
@@ -244,3 +266,111 @@ const moneyInPocket = 0.50; // float
 const dogName = null;
 
 // strings, booleans, numbers, floats, and null
+
+
+
+
+
+
+
+
+// 1/14/2023
+// MAJOR COMPUTER SCIENCE FUNDAMENTAL: I/0 OR IN AND OUT
+
+// IN > PROCESS > OUT
+// LAUNDRY EXAMPLE
+// PUT IN DIRTY CLOTHERS -> LAUNDRY MACHINE CLEANS IT -> WE GET CLEAN CLOTHES OUT
+
+// basic structure of a function consists of three things
+// the function keyword
+// a function name (not required)
+// a place to pass in argumentes/parameters in ()
+// the curly braces where the code is executed
+function addFive(someNumber) {
+    return someNumber + 5;
+}
+
+addFive(100); // 105
+// 100 in
+// processing is the math
+// out is the final sum (105)
+
+// the last index is always one less than the size/length of an array
+const letters = ['a', 'b', 'c'];
+// letters[2];
+// THE SIZE/LENGTH IS DIFFERENT THAN THE INDEX OF AN ARRAY .
+// length is 3 
+// first index is 0
+// last index is 2
+
+// define a function called lastIndex that takes an array as an arguemnet and returns the last element of that array
+function lastIndex(arr) {
+// 
+
+    // return arr.length - 1; // gives me back the last index of an array
+    // to get the last element of an array we have to use the last index
+    return arr[arr.length - 1];
+
+}
+
+console.log(lastIndex(letters));
+
+// the index is the positon of the element in an array
+// the length of an array is the total numbers of elements in an array
+
+
+// write a function called stringAdder that adds two strings together and returns them.
+
+function stringAdder() {
+    return cake + pie;
+}
+
+stringAdder(1, 5);
+
+// -----------------------------
+
+function stringAdder(string1, string2) {
+    return string1 + string2;
+}
+
+const myName = 'mario';
+const myLastName = 'smith';
+
+// typeof 5
+
+// console.log(stringAdder(myName, myLastName));
+// console.log(typeof true);
+
+// typeof will always return a string of the type
+
+
+
+// write a funciton, can be any name, that takes in two numbers and multiplies them and returns that value. 
+// If any of the two numbers is not a number, then return the string 'cannot compute'
+
+function multiplier(num1, num2 ) {
+    // if (typeof num1 != 'number') {
+    //     return 'cannot compute';
+    // } else if (typeof num2 != 'number') {
+    //     return 'cannot compute';
+    // } else {
+    //     return num1 * num2;
+    // }
+
+    if (typeof num1 != 'number' || typeof num2 != 'number') {
+        return 'cannot compute';
+    } else {
+        return num1 * num2;
+    }
+    
+} 
+
+console.log(multiplier(5, '50'));
+
+
+
+function adder() {
+    console.log(arguments);
+}
+
+console.log(adder(4,4,4,4))
