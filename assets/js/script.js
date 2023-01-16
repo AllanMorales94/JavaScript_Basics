@@ -373,4 +373,115 @@ function adder() {
     console.log(arguments);
 }
 
-console.log(adder(4,4,4,4))
+// console.log(adder(4,4,4,4))
+
+
+
+
+// 1/15/2023
+// 1. Operators and expressions
+// 2. if/else logic
+// 3. for loops
+// 4. funtions
+
+// 1. Operators and expressions
+1 == 1 // true
+1 < 5 // true
+5 <= 5 // true
+"" === false // true
+0 === false // true 
+
+const appleColor = 'green';
+const fruit = '';
+const vegetable = 'potato';
+const vegetableColor = 'white';
+
+// == is a not strict comparison. this checks for the value and not the type
+// === is a strict comparison. this checks for the value and type
+
+
+// && means both sides have to be true
+// || means only one side has to be true
+if(fruit === 'apple' && appleColor) {
+    console.log('1. there IS an apple and apple color here');
+} else if (!fruit || !appleColor) {
+    console.log('2. there is NO apple or apple color here');
+} else if (fruit === 'lemon') {
+    console.log('there is only a lemon fruit');
+}
+
+// !(false) && !(true)
+// true && false
+if(!(fruit && appleColor) && !(vegetable && vegetableColor)){
+    console.log('fuit/veggie with color');
+}
+
+// // if ( true && true  )
+// if( (2 < 5) && (10 > 2) ) {
+//     console.log('this is true');
+// }
+
+
+const clothes = ['jacket', 'sweater', 'pants', 'shirt', 'hat']
+
+// write a for loop that iterates through the clothes array, if the element is 'shirt', then console log that index
+
+// a for loop takes in three parameters
+// the first is the starting index
+// the second is the condition up until where the for loop will go up until
+// the third is whether it is incrementing or decrementing
+// 0 - 4
+// we want to loop up until the last index of the array
+// the last index of the array is always less than the length of the array
+
+// the for loop is going to run 5 times
+// jacket 
+// sweater
+// pants
+// shirt
+// hat
+
+for(let i = 0; i < clothes.length; i++) {
+    // console.log(clothes[i]);
+    // write an if statement 
+    // the condition in the if statement will check to see if the element at the current interation is === 'shirt'
+    // if that is true, then console log that index
+    // when i = 3, then clothes[i] will equal 'shirt'
+
+
+    if(clothes[i] === 'shirt') {
+        // console.log('found shirt');
+        // console.log(i); // 3
+    }
+
+}
+
+// write a function that takes in an array of numbers, iterates through the array, and returns the sum of those numbers
+//  for example: addArray([4,6,1,3]) -> 14
+
+// Errors
+// 1. name of the function was not very clear
+// 2. number of arguments
+// 3. addArray is a funtion and does not have a length
+
+// I have a wallet with two 20s, three 10s, and one 5
+// [20, 20, 10, 10, 10, 5] -> 75
+// 20
+// 20 + 20 = 40
+// 40 + 10 = 50
+// 50 + 10 = 60
+// 60 + 10 = 70
+// 70 + 5 = 75
+function addArray(arrayToAdd) {
+    let totalAmount = 0;
+
+    for(let i = 0; i < arrayToAdd.length; i++) {
+        totalAmount = arrayToAdd[i] + totalAmount
+    }
+    return totalAmount;
+};
+
+const moneyInWalletArray = [20, 20, 10, 10, 10, 5];
+
+console.log(addArray(moneyInWalletArray));
+
